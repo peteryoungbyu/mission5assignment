@@ -3,7 +3,82 @@
     ViewData["Page"] = "Elite Athletes";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<style>
+    .athlete-img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .athlete-img-top {
+        object-position: top;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 mb-4">Elite Athletes</h1>
+        <p class="lead">If you like the olympics, track and field, inspirational people, or even if you're into anything cool then you should probably know these athletes.</p>
+        <p class="text-muted">All of the following are olympic medalists.</p>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="row g-3 mb-5">
+        <div class="col-md-4">
+            <img src="img/kipchoge.webp" alt="Eliud Kipchoge" class="athlete-img rounded shadow" />
+        </div>
+        <div class="col-md-4">
+            <img src="img/hocker.jpg" alt="Cole Hocker" class="athlete-img athlete-img-top rounded shadow" />
+        </div>
+        <div class="col-md-4">
+            <img src="img/jakobing.jpg" alt="Jakob Ingebrigtsen" class="athlete-img rounded shadow" />
+        </div>
+        <div class="col-md-6">
+            <img src="img/kenneth.jpg" alt="Kenneth Rooks" class="athlete-img athlete-img-top rounded shadow" />
+        </div>
+        <div class="col-md-6">
+            <img src="img/mondo.jpg" alt="Mondo Duplantis" class="athlete-img athlete-img-top rounded shadow" />
+        </div>
+    </div>
+
+    <!-- Athletes Information Card -->
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white" style="background-color: #9B5094 !important">
+            <h2 class="h4 mb-0">Meet the Athletes</h2>
+        </div>
+        <div class="card-body p-4">
+            <div class="list-group list-group-flush">
+                <div class="list-group-item">
+                    <h5 class="mb-2">1. Eliud Kipchoge</h5>
+                    <p class="mb-0">Kipchoge is a 2 time gold medalist in the marathon. He is also one of the most inspirational athletes of all time, one of the only known
+                        to have run a marathon in under 2 hours (not officially recognized as a world record). His motto is "No human is limited".</p>
+                </div>
+
+                <div class="list-group-item">
+                    <h5 class="mb-2">2. Cole Hocker</h5>
+                    <p class="mb-0">Cole Hocker snuck up to win the gold in the 1500m in the 2024 Paris Olympics</p>
+                </div>
+
+                <div class="list-group-item">
+                    <h5 class="mb-2">3. Jakob Ingebrigtsen</h5>
+                    <p class="mb-0">Ingebrigtsen is a Norwegian two-time gold medalist. He also holds 5 ratified world records. One of the top distance runners
+                        of all time. He specializes in the 1500m and 5000m, and hopes to break the outdoor world records in them in 2026.</p>
+                </div>
+
+                <div class="list-group-item">
+                    <h5 class="mb-2">4. Kenneth Rooks</h5>
+                    <p class="mb-0">Kenneth Rooks is a Nike athlete from Washington specializing in the 3000m Steeplechase. While attending BYU, he won the NCAA Steeplechase final even after taking a fall in the 
+                        early laps of the race. In the Paris 2024 Olympics, an ambitious move with a lap to go helped him win a silver medal.</p>
+                </div>
+
+                <div class="list-group-item">
+                    <h5 class="mb-2">5. Mondo Duplantis</h5>
+                    <p class="mb-0">Mondo Duplantis is a pole vault athlete. He is probably one of the most dominant athletes in an event in history. He has
+                        set the world record no less than 14 times, breaking his own world record every time. Also known for doing the "Turkish Guy" celebration
+                        after his pole vault in the olympics.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,45 +1,56 @@
 ﻿@{
-    ViewData["Title"] = "Calc";
-    ViewData["Page"] = "Calculator";
+    ViewData["Title"] = "Calculator";
+    ViewData["Page"] = "Home";
 }
-<h1>@ViewData["Page"]</h1>
 
-<div class="card" style="max-width: 500px;">
-    <div class="card-header">
-        <h2>Tutor me in learning who the best athletes are</h2>
-    </div>
-    <div class="card-body">
-        <form>
-            <div class="form-group mb-3">
-                <label for="txtHours">Hours Needed:</label>
-                <input type="number" class="form-control" id="txtHours" placeholder="Enter number of hours" min="1">
-                <span id="error-message" class="text-danger" style="display:none;">
-                    Please enter a positive number greater than 0.
-                </span>
-            </div>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <h1 class="text-center mb-4">@ViewData["Title"]</h1>
+            
+            <div class="card shadow">
+                <div class="card-header" style="background-color: #9B5094">
+                    <h2 class="h4 mb-0" style="color: white;">Tutor me in learning who the best athletes are</h2>
+                </div>
+                <div class="card-body p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="txtHours" class="form-label fw-bold">Hours Needed:</label>
+                            <input type="number" class="form-control form-control-lg" id="txtHours" 
+                                   placeholder="Enter number of hours" min="1">
+                            <span id="error-message" class="text-danger small mt-1" style="display:none;">
+                                Please enter a positive number greater than 0.
+                            </span>
+                        </div>
 
-            <div class="form-group mb-3">
-                <label for="txtRate">Hourly Rate:</label>
-                <div class="input-group">
-                    <span class="input-group-text">$</span>
-                    <input type="text" class="form-control" id="txtRate" value="26.20" readonly>
+                        <div class="mb-3">
+                            <label for="txtRate" class="form-label fw-bold">Hourly Rate:</label>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text">$</span>
+                                <input type="text" class="form-control" id="txtRate" value="26.20" readonly>
+                            </div>
+                        </div>
+
+                        <div class="d-grid mb-3">
+                            <button type="button" id="btnCalculate" class="btn btn-primary btn-lg" style="background-color: #61988E">
+                                Calculate Cost
+                            </button>
+                        </div>
+
+                        <div class="mb-0">
+                            <label for="txtTotal" class="form-label fw-bold">Total Cost:</label>
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text">$</span>
+                                <input type="text" class="form-control" id="txtTotal" readonly>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-
-            <button type="button" id="btnCalculate" class="btn btn-primary mb-3">Calculate Cost</button>
-
-            <div class="form-group">
-                <label for="txtTotal">Total Cost:</label>
-                <div class="input-group">
-                    <span class="input-group-text">$</span>
-                    <input type="text" class="form-control" id="txtTotal" readonly>
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
 @section Scripts {
-    
     <script src="~/js/calculator.js"></script>
 }
