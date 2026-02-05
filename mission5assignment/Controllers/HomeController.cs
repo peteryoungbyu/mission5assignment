@@ -10,7 +10,7 @@ namespace mission5assignment.Controllers
         {
             return View();
         }
-
+        // Changed action to return the "calc" view.
         public IActionResult Calc()
         {
             return View();

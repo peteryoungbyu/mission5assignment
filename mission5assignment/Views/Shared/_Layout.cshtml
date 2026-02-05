@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@* Overall layout *@
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -21,6 +23,7 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        @* Links to both pages *@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Athletes</a>
                         </li>
@@ -34,10 +37,11 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            @* Where the page bodies will be rendered *@
             @RenderBody()
         </main>
     </div>
-
+    @* Footer with creator and site information *@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2026 - Mission 5 Assignment - Peter Young - <a asp-area="" asp-controller="Home" asp-action="Calc">Calculator</a>

@@ -1,4 +1,6 @@
-﻿@{
+﻿@* Calculator page *@
+
+@{
     ViewData["Title"] = "Calculator";
     ViewData["Page"] = "Home";
 }
@@ -7,7 +9,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
             <h1 class="text-center mb-4">@ViewData["Title"]</h1>
-            
+            @* Card to hold calculation *@
             <div class="card shadow">
                 <div class="card-header" style="background-color: #9B5094">
                     <h2 class="h4 mb-0" style="color: white;">Tutor me in learning who the best athletes are</h2>
@@ -16,8 +18,8 @@
                     <form>
                         <div class="mb-3">
                             <label for="txtHours" class="form-label fw-bold">Hours Needed:</label>
-                            <input type="number" class="form-control form-control-lg" id="txtHours" 
-                                   placeholder="Enter number of hours" min="1">
+                            <input type="number" class="form-control form-control-lg" id="txtHours"  
+                                   placeholder="Enter number of hours" min="1">    @*Receives user input with validation to make sure it is positive*@
                             <span id="error-message" class="text-danger small mt-1" style="display:none;">
                                 Please enter a positive number greater than 0.
                             </span>
@@ -27,7 +29,7 @@
                             <label for="txtRate" class="form-label fw-bold">Hourly Rate:</label>
                             <div class="input-group input-group-lg">
                                 <span class="input-group-text">$</span>
-                                <input type="text" class="form-control" id="txtRate" value="26.20" readonly>
+                                <input type="text" class="form-control" id="txtRate" value="26.20" readonly>@*Gotta keep a high rate to stay in business!*@
                             </div>
                         </div>
 
@@ -51,6 +53,7 @@
     </div>
 </div>
 
+@* Connects to the script for this file *@
 @section Scripts {
     <script src="~/js/calculator.js"></script>
 }

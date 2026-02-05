@@ -1,9 +1,8 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿// Peter Young section 1-9
 
-// Write your JavaScript code.
-// File: wwwroot/js/calculator.js
 
+
+// JS function when the button is clicked ot make the calculation
 $(document).ready(function () {
     $("#btnCalculate").click(function () {
         // 1. Get the values
